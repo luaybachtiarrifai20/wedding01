@@ -1,0 +1,95 @@
+/* ========== ANIMATIONS ========== */
+
+/* Slide in from bottom when content page opens */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in from top */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Zoom in */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.animate-slideIn {
+  animation: slideIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.2s;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Intersection observer reveal: elements start hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

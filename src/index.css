@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Secret Garden Theme Colors */
+:root {
+  --sage-green: #8fa896;
+  --sage-green-dark: #6b8e7b;
+  --ivory: #fffff0;
+  --blush-pink: #e8c4c4;
+  --blush-pink-dark: #d4a5a5;
+  --cream: #fdf5e6;
+  --forest-green: #2d5a4d;
+}
+
+/* Responsive font sizes for mobile */
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    font-size: 12px;
+  }
+}
