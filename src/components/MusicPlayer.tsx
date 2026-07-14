@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import bgMusic from '../assets/SapeDayak.mp3';
+import bgMusic from '../../images/musik.webm';
 
 let globalAudio: HTMLAudioElement | null = null;
 
