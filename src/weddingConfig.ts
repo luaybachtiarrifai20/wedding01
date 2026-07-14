@@ -76,13 +76,18 @@ export const weddingConfig = {
 
   // Gift Section
   gift: {
-    bankAccount: {
-      bankName: "MANDIRI",
-      accountNumber: "1460016871464",
-      accountName: "July Melati Puteri",
-      chipImage: "chip-atm-1-2-1-1-1-1.png",
-      bankLogo: "BANK-BRI-1.png",
-    },
+    bankAccounts: [
+      {
+        bankName: "MANDIRI",
+        accountNumber: "1460016871464",
+        accountName: "July Melati Puteri",
+      },
+      {
+        bankName: "MANDIRI",
+        accountNumber: "1460013406272",
+        accountName: "Indra Lukman Permana",
+      },
+    ],
     giftShipping: {
       recipientName: "July Melati Puteri",
       phoneNumber: "",
