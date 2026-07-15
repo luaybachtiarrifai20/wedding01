@@ -39,7 +39,7 @@ export const PageUcapan: React.FC = () => {
     <section
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="relative w-full flex flex-col items-center overflow-hidden py-12 px-5"
-      style={{ backgroundColor: 'rgba(253,245,230,0.85)' }}
+      style={{ backgroundColor: 'rgba(253,245,230,0.7)' }}
     >
       <div className="w-full flex flex-col items-center gap-6">
         {/* Header Card */}

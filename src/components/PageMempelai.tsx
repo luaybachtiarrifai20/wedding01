@@ -71,7 +71,7 @@ export const PageMempelai: React.FC = () => {
       <div
         className="w-full flex flex-col items-center px-6 py-10"
         style={{
-          backgroundColor: "rgba(143,168,150,0.9)",
+          backgroundColor: "rgba(143,168,150,0.7)",
         }}>
         <p
           className="reveal text-white text-[13px] leading-relaxed text-center italic mb-3 px-2"
@@ -89,7 +89,7 @@ export const PageMempelai: React.FC = () => {
       <div
         className="w-full flex flex-col items-center pb-12 pt-6 px-5 gap-6"
         style={{
-          backgroundColor: "rgba(255,255,240,0.85)",
+          backgroundColor: "rgba(255,255,240,0.7)",
         }}>
         <PersonCard
           role="Pengantin Pria"
