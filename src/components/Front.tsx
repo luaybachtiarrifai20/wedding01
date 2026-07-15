@@ -1,6 +1,7 @@
 import React from "react";
 import { weddingConfig } from "../weddingConfig";
 import { useWedding } from "../context/WeddingContext";
+import { playBackgroundMusic } from "./MusicPlayer";
 import awalanImage from "../../images/border1.png";
 
 interface FrontProps {
@@ -9,6 +10,11 @@ interface FrontProps {
 
 export const Front: React.FC<FrontProps> = ({ onOpen }) => {
   const { guestName } = useWedding();
+
+  const handleOpen = () => {
+    playBackgroundMusic();
+    onOpen();
+  };
 
   return (
     <div
@@ -30,8 +36,8 @@ export const Front: React.FC<FrontProps> = ({ onOpen }) => {
       <div className="w-[70%] max-w-[400px] flex flex-col items-center mt-12 relative z-10">
         {/* The Card containing ONLY the couple's photo */}
         <div
-          className="relative w-[80%] rounded-[20px] overflow-hidden shadow-lg border-[2px] border-[#8FA896] mb-8"
-          style={{ height: "45vh", minHeight: "250px", maxHeight: "200px" }}
+          className="relative w-[90%] rounded-[20px] overflow-hidden shadow-lg border-[2px] border-[#8FA896] mb-8"
+          style={{ height: "50vh", minHeight: "300px" }}
         >
           {/* Photo Background */}
           <div
@@ -39,7 +45,7 @@ export const Front: React.FC<FrontProps> = ({ onOpen }) => {
             style={{
               backgroundImage: `url(${weddingConfig.front.photo})`,
               backgroundSize: "cover",
-              backgroundPosition: "top center",
+              backgroundPosition: "center",
             }}
           ></div>
 
@@ -76,7 +82,7 @@ export const Front: React.FC<FrontProps> = ({ onOpen }) => {
           </div>
 
           <button
-            onClick={onOpen}
+            onClick={handleOpen}
             className="flex items-center gap-2 font-['Poppins'] text-[12px] font-medium text-white px-[20px] py-[11px] rounded-[27px] hover:opacity-90 transition-opacity"
             style={{
               backgroundImage: "linear-gradient(180deg, #E8C4C4 0%, #D4A5A5 100%)",

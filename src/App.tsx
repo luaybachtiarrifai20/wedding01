@@ -8,6 +8,7 @@ import { PageGift } from './components/PageGift';
 import { PageUcapan } from './components/PageUcapan';
 import { PagePenutup } from './components/PagePenutup';
 import { MusicPlayer } from './components/MusicPlayer';
+import bgImage from '../images/background.png';
 import './App.css';
 
 function App() {
@@ -35,12 +36,24 @@ function App() {
           /* ===== HALAMAN KONTEN (slide-in dari bawah) ===== */
           <div className="w-full animate-slideIn">
             <PageCouple />
-            <PageMempelai />
-            <PageAcara />
-            <PageGaleri />
-            <PageGift />
-            <PageUcapan />
-            <PagePenutup />
+
+            {/* ===== BACKGROUND mulai dari PageMempelai ke bawah ===== */}
+            <div
+              className="w-full"
+              style={{
+                backgroundImage: `url(${bgImage})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: 'auto',
+                backgroundPosition: 'top center',
+              }}
+            >
+              <PageMempelai />
+              <PageAcara />
+              <PageGaleri />
+              <PageGift />
+              <PageUcapan />
+              <PagePenutup />
+            </div>
           </div>
         )}
       </div>

@@ -10,13 +10,13 @@ export const weddingConfig = {
   // Front
   front: {
     names: "Indra & July",
-    photo: couplePhoto,
+    photo: photo1,
   },
 
   // Couple Section
   couple: {
     names: "Indra & July",
-    date: "Jumat, 21 Agustus 2026",
+    date: "Sabtu, 22 Agustus 2026",
     photo: couplePhoto,
   },
 
@@ -91,7 +91,7 @@ export const weddingConfig = {
     giftShipping: {
       recipientName: "July Melati Puteri",
       phoneNumber: "",
-      address: "",
+      address: "JL. Tabrani Ahmad Komplek Palestin Indah Permai II No.B23",
     },
   },
 };

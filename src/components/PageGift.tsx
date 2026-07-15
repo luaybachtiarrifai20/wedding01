@@ -20,7 +20,7 @@ export const PageGift: React.FC = () => {
     <section
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="relative w-full flex flex-col items-center overflow-hidden py-12 px-5"
-      style={{ backgroundColor: "#FDF5E6" }}
+      style={{ backgroundColor: "rgba(253,245,230,0.85)" }}
     >
       <div className="w-full flex flex-col items-center gap-6">
         <div
@@ -135,9 +135,9 @@ export const PageGift: React.FC = () => {
                 <p className="text-black text-[13px]" style={{ fontFamily: "Poppins, sans-serif" }}>
                   Nama Penerima : {giftShipping.recipientName}
                 </p>
-                <p className="text-black text-[13px]" style={{ fontFamily: "Poppins, sans-serif" }}>
+                {/* <p className="text-black text-[13px]" style={{ fontFamily: "Poppins, sans-serif" }}>
                   Nomor HP : {giftShipping.phoneNumber}
-                </p>
+                </p> */}
                 <p className="text-black text-[13px]" style={{ fontFamily: "Poppins, sans-serif" }}>
                   Alamat Kirim Hadiah : {giftShipping.address}
                 </p>

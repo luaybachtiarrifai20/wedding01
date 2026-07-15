@@ -7,7 +7,7 @@ export const PageGaleri: React.FC = () => {
     <section
       className="relative w-full flex flex-col items-center overflow-hidden py-12 px-5"
       style={{
-        backgroundColor: "#FDF5E6",
+        backgroundColor: "rgba(253,245,230,0.85)",
       }}
     >
       <div className="w-full flex flex-col items-center gap-5">
