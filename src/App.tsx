@@ -8,7 +8,7 @@ import { PageGift } from './components/PageGift';
 import { PageUcapan } from './components/PageUcapan';
 import { PagePenutup } from './components/PagePenutup';
 import { MusicPlayer } from './components/MusicPlayer';
-import bgImage from '../images/background.png';
+import bgImage from '../images/taman.png';
 import './App.css';
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
               style={{
                 backgroundImage: `url(${bgImage})`,
                 backgroundRepeat: 'repeat',
-                backgroundSize: 'auto',
+                backgroundSize: '300px auto',
                 backgroundPosition: 'top center',
               }}
             >
