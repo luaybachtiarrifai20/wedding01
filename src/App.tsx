@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Front } from './components/Front';
 import { PageCouple } from './components/PageCouple';
+import { PageQuote } from './components/PageQuote';
 import { PageMempelai } from './components/PageMempelai';
 import { PageAcara } from './components/PageAcara';
 import { PageGaleri } from './components/PageGaleri';
@@ -9,6 +10,7 @@ import { PageUcapan } from './components/PageUcapan';
 import { PagePenutup } from './components/PagePenutup';
 import { MusicPlayer } from './components/MusicPlayer';
 import bgImage from '../images/taman.png';
+import bgMempelai from '../images/background_mempelai.png';
 import './App.css';
 
 function App() {
@@ -37,7 +39,7 @@ function App() {
           <div className="w-full animate-slideIn">
             <PageCouple />
 
-            {/* ===== BACKGROUND mulai dari PageMempelai ke bawah ===== */}
+            {/* ===== BACKGROUND untuk PageQuote dan PageMempelai ===== */}
             <div
               className="w-full"
               style={{
@@ -47,7 +49,32 @@ function App() {
                 backgroundPosition: 'top center',
               }}
             >
+              <PageQuote />
+            </div>
+
+            {/* ===== BACKGROUND untuk PageMempelai ===== */}
+            <div
+              className="w-full"
+              style={{
+                backgroundImage: `url(${bgMempelai})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            >
               <PageMempelai />
+            </div>
+
+            {/* ===== BACKGROUND mulai dari PageAcara ke bawah ===== */}
+            <div
+              className="w-full"
+              style={{
+                backgroundImage: `url(${bgImage})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '300px auto',
+                backgroundPosition: 'top center',
+              }}
+            >
               <PageAcara />
               <PageGaleri />
               <PageGift />
