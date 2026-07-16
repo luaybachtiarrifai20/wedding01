@@ -17,81 +17,104 @@ export const PageMempelai: React.FC = () => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="relative w-full flex flex-col items-center overflow-hidden py-12">
       {/* ---- Groom Section ---- */}
-      <div className="reveal w-full flex flex-col items-center py-8 px-5 mb-4">
+      <h1
+        className="text-3xl text-[#2D5A4D] text-center mb-10"
+        style={{ fontFamily: "Cormorant Garamond, serif" }}>
+        Mempelai
+      </h1>
+      <div className="grid grid-cols-2 gap-10 items-center mx-5">
         <div
-          className="w-[140px] h-[200px] overflow-hidden mb-4 border-4 border-[#E8C4C4]"
-          style={{ borderRadius: "50% 50% 45% 45% / 60% 60% 40% 40%", boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}>
+          className="relative w-[130px] h-[180px] md:w-[180px] md:h-[250px] border-[3px] border-[#D7B46A] bg-white p-2 shadow-xl"
+          style={{
+            borderRadius: "120px 120px 35px 35px",
+          }}>
           <img
             src={groom.photo}
             alt={groom.name}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{
+              borderRadius: "110px 110px 30px 30px",
+            }}
           />
         </div>
-        <div
-          className="flex flex-col items-center text-center px-6 py-4 rounded-[15px]"
-          style={{ backgroundColor: "rgba(255,255,240,0.85)" }}>
+        <div className="text-left bg-[rgba(255,255,240,0.85)] rounded-[15px] p-4">
+          <p className="tracking-[3px] uppercase text-[12px] text-[#7E6C54]">
+            Pengantin Pria
+          </p>
+
           <h2
-            className="text-[#2D5A4D] text-[22px] font-semibold mb-2"
-            style={{ fontFamily: "Philosopher, sans-serif" }}>
+            className="text-xl text-[#2D5A4D] mt-1 mb-1"
+            style={{ fontFamily: "Cormorant Garamond" }}>
             {groom.name}
           </h2>
+
+          <div className="w-20 h-px bg-[#C8A86B] mb-1" />
+
           <p
-            className="text-[#2D5A4D] text-[11px] md:text-[15px] mb-3 leading-relaxed max-w-[280px]"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-            dangerouslySetInnerHTML={{ __html: groom.description }}
+            className="leading-2 text-[#555] text-[12px]"
+            dangerouslySetInnerHTML={{
+              __html: groom.description,
+            }}
           />
-          {groom.instagram && (
-            <a
-              href={groom.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-              style={{ backgroundColor: "#E8C4C4", color: "#2D5A4D" }}>
-              <InstagramIcon />
-            </a>
-          )}
+          <a
+            href={bride.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 w-8 h-8 rounded-full bg-[#E8C4C4] text-[#2D5A4D] flex items-center justify-center shadow-md transition-all hover:scale-110 self-center md:self-end">
+            <InstagramIcon />
+          </a>
         </div>
       </div>
 
       {/* ---- Ampersand Section ---- */}
-      <div className="reveal text-[#2D5A4D] text-[32px] font-bold mb-4" style={{ fontFamily: "Philosopher, serif" }}>
+      <div
+        className="reveal text-[#2D5A4D] text-[32px] font-bold my-4"
+        style={{ fontFamily: "Philosopher, serif" }}>
         &amp;
       </div>
 
       {/* ---- Bride Section ---- */}
-      <div className="reveal w-full flex flex-col items-center py-8 px-5 pb-12">
+      <div className="grid grid-cols-2 gap-10 items-center mx-5">
+        <div className="text-left bg-[rgba(255,255,240,0.85)] rounded-[15px] p-4">
+          <p className="tracking-[3px] uppercase text-[12px] text-[#7E6C54]">
+            Pengantin Wanita
+          </p>
+
+          <h2
+            className="text-xl text-[#2D5A4D] mt-1 mb-1"
+            style={{ fontFamily: "Cormorant Garamond" }}>
+            {bride.name}
+          </h2>
+
+          <div className="w-20 h-px bg-[#C8A86B] mb-1" />
+
+          <p
+            className="leading-2 text-[#555] text-[12px]"
+            dangerouslySetInnerHTML={{
+              __html: bride.description,
+            }}
+          />
+          <a
+            href={bride.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 w-8 h-8 rounded-full bg-[#E8C4C4] text-[#2D5A4D] flex items-center justify-center shadow-md transition-all hover:scale-110 self-center md:self-end">
+            <InstagramIcon />
+          </a>
+        </div>
         <div
-          className="w-[140px] h-[200px] overflow-hidden mb-4 border-4 border-[#E8C4C4]"
-          style={{ borderRadius: "50% 50% 45% 45% / 60% 60% 40% 40%", boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}>
+          className="relative flex text-center items-center justify-center w-[130px] h-[180px] md:w-[180px] md:h-[250px] border-[3px] border-[#D7B46A] bg-white p-2 shadow-xl"
+          style={{
+            borderRadius: "120px 120px 35px 35px",
+          }}>
           <img
             src={bride.photo}
             alt={bride.name}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{
+              borderRadius: "110px 110px 30px 30px",
+            }}
           />
-        </div>
-        <div
-          className="flex flex-col items-center text-center px-6 py-4 rounded-[15px]"
-          style={{ backgroundColor: "rgba(255,255,240,0.85)" }}>
-          <h2
-            className="text-[#2D5A4D] text-[22px] font-semibold mb-2"
-            style={{ fontFamily: "Philosopher, sans-serif" }}>
-            {bride.name}
-          </h2>
-          <p
-            className="text-[#2D5A4D] text-[11px] md:text-[14px] mb-3 leading-relaxed max-w-[280px]"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-            dangerouslySetInnerHTML={{ __html: bride.description }}
-          />
-          {bride.instagram && (
-            <a
-              href={bride.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-              style={{ backgroundColor: "#E8C4C4", color: "#2D5A4D" }}>
-              <InstagramIcon />
-            </a>
-          )}
         </div>
       </div>
     </section>
